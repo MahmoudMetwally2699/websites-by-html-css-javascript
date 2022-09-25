@@ -1,0 +1,467 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* Variables */
+
+:root {
+    --c-brand: #f83691;
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #303050;
+    --c-body: #636383;
+    --c-light: #f6f6f6;
+    --f-main: "Bai Jamjuree", sans-serif;
+    --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+    --orange-color: rgb(246, 99, 53);
+    --primary-color: rgb(27, 31, 41);
+    --text-color: rgb(96, 97, 99);
+    --secondary-color: rgb(237, 242, 252);
+    --white-color: rgb(255, 255, 255);
+    --para-color: rgb(96, 97, 99);
+    --dark-color: rgb(27, 31, 41);
+    --yellow-color: rgb(253, 184, 19);
+}
+
+
+/* Reset & Helpers */
+
+body {
+    font-family: var(--f-main);
+    color: var(--secondary-color);
+    line-height: 1.7;
+}
+
+.dark-theme {
+    --primary-color: rgb(237, 242, 252);
+    --secondary-color: rgb(27, 31, 41);
+}
+
+#icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#icon:hover {
+    scale: 1.5;
+}
+
+.moon {
+    color: var(--secondary-color);
+}
+
+.sun {
+    color: var(--yellow-color);
+}
+
+.j5 {
+    color: var(--secondary-color);
+}
+
+h2,
+.h1,
+h1,
+.h2,
+.head44,
+.h3,
+.h4,
+.h5,
+h5,
+.h6 h3,
+h4,
+h6 {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-brand {
+    color: var(--secondary-color);
+}
+
+.setion-title {
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.setion-title .line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+    display: inline-block;
+}
+
+.section-connector {
+    position: relative;
+}
+
+.section-connector::after {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+    background-color: var(--primary-color);
+}
+
+.navbar.scrolled {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.navbar-toggler {
+    border-radius: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    scale: 1.1;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.navbar-brand:hover {
+    color: var(--c-brand);
+    scale: 1.5;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.social-icon:hover {
+    scale: 1.5;
+}
+
+
+/* Btn */
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: var(--c-brand);
+    border-color: var(--secondary-color);
+}
+
+.btn-brand:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--c-brand);
+}
+
+.btn-brand,
+.btn-brand:focus {
+    background-color: var(--primary-color);
+    color: var(--c-brand);
+    border-color: var(--secondary-color);
+}
+
+
+/* Home */
+
+#home {
+    background-position: center;
+    background-color: var(--primary-color);
+    background-size: cover;
+}
+
+.img_box {
+    width: 35%;
+    height: 60%;
+    position: absolute;
+    bottom: 10rem;
+    right: 7rem;
+}
+
+.img_box img {
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.img_box .background_img {
+    right: 0;
+    bottom: 0;
+}
+
+.img_box .main_img {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.img_box:hover .background_img {
+    bottom: 2rem;
+}
+
+.img_box:hover .main_img {
+    left: 54%;
+}
+
+
+/* Services */
+
+#services {
+    background-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span {
+    font-weight: 700;
+}
+
+.custom-link i {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    color: var(--secondary-color);
+    margin-left: 6px;
+    transition: var(--transition);
+}
+
+.custom-link:hover i {
+    transform: translateX(6px);
+}
+
+
+/*work*/
+
+#work {
+    background-color: var(--primary-color);
+}
+
+
+/*resume*/
+
+#resume {
+    background-color: var(--primary-color);
+}
+
+
+/*blog*/
+
+#blog {
+    background-color: var(--primary-color);
+}
+
+.blgim:hover {
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+
+
+/*contact*/
+
+#contact {
+    background-color: var(--primary-color);
+}
+
+
+/* Project */
+
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img,
+.project .content {
+    transition: var(--transition);
+}
+
+.project:hover .content {
+    top: 0;
+}
+
+.project:hover img {
+    transform: translateY(-100%);
+}
+
+
+/* Client */
+
+.client {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.client img {
+    opacity: 0.7;
+    height: 30px;
+}
+
+
+/* Resume */
+
+.eduexp {
+    position: relative;
+}
+
+.eduexp::before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: rgba(var(--primary-color), 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.eduexp::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    padding-top: 80px;
+}
+
+footer h4 {
+    color: var(--secondary-color);
+    margin-bottom: 24px;
+}
+
+footer p,
+footer li,
+footer li a {
+    color: var(--secondary-color);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-top: 6px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-bottom a {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
